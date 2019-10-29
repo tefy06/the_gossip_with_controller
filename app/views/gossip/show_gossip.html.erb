@@ -1,0 +1,16 @@
+<div class="container">
+  <ul>
+    <li><b>Titre: <%= @gossip.title %></b></li>
+    <li><b>Auteur: </b>
+      <%= link_to "/author/#{@gossip.user.id}" do %>
+        <%= @gossip.user.first_name %>
+          <% end %>
+    </li>
+    <li><b>Contenu: </b>
+      <%= @gossip.content %>
+    </li>
+    <li><b>Date de creation: </b>
+      <%= @gossip.created_at%>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+  <h1>BIENVENUE
+    <span><%= @first_name %></span>
+  </h1>
+  <p>
+    Ici c'est notre super site de potins, il est chouette, non ?
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Auteur du potin</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for index_gossip in 0 ... @list_gossip.size %>
+        <tr>
+          <td>
+            <%= @list_gossip[index_gossip].user.first_name %>
+          </td>
+          <td>
+            <%= link_to "/gossip/#{@list_gossip[index_gossip].id}" do %>
+              <%= @list_gossip[index_gossip].title %>
+                <% end %>
+          </td>
+        </tr>
+        <% end %>
+    </tbody>
+  </table>
+</div>

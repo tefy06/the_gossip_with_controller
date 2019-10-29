@@ -1,26 +1,28 @@
-<h1>Pair-programming:</h1>
+<div class="container">
+  <h1>Pair-programming:</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Prénom(s)</th>
-      <th>Nom(s)</th>
-      <th>Github</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% for index_person in 0 ... @list_person_in_team.size%>
+  <table>
+    <thead>
       <tr>
-        <td>
-          <%= @list_person_in_team[index_person].first_name %>
-        </td>
-        <td>
-          <%= @list_person_in_team[index_person].last_name %>
-        </td>
-        <td>
-          <%= @list_person_in_team[index_person].url_github %>
-        </td>
+        <th>Prénom(s)</th>
+        <th>Nom(s)</th>
+        <th>Github</th>
       </tr>
-      <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% for index_person in 0 ... @list_person_in_team.size%>
+        <tr>
+          <td>
+            <%= @list_person_in_team[index_person].first_name %>
+          </td>
+          <td>
+            <%= @list_person_in_team[index_person].last_name %>
+          </td>
+          <td>
+            <%= @list_person_in_team[index_person].url_github %>
+          </td>
+        </tr>
+        <% end %>
+    </tbody>
+  </table>
+</div>

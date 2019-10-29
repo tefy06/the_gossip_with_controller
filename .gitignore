@@ -1,1 +1,15 @@
-node_modules
+/.bundle
+
+/node_modules/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+/storage/*
+*/storage/.keep
+
+/node_modules
+/yarn-error.log
+
+/public/assets
+.byebug_history
